@@ -1,0 +1,7 @@
+Para agregar archivos que GIT no copio
+
+
+composer install 
+copiar .env.example y renombroa .env el env es el archivo de configuracion
+php artisan key:generate 'genero una clave
+php artisan serve 'arranco el servidor
