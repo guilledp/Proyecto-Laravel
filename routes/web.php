@@ -14,3 +14,32 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', function () {
+
+  $user = 'guille';
+  $email = 'guilledp@hotmail.com';
+
+  $datos = compact('user','email');
+
+  return view('index',$datos);
+
+});
+
+Route::get('/miPrimeraRuta', function () {
+
+  return view('miPrimeraRuta');
+
+});
+
+Route::get('/esPar/{numero}', function ($numero) {
+
+    if (($numero%2)===0) {
+      $decir ='el numero es par';
+    }else {
+      $decir='el numero es Impar';
+    }
+
+    return view('esPar',compact('decir'));
+
+});
