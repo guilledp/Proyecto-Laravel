@@ -33,7 +33,7 @@
     <!-- AQUI VAN LOS CURSOS -->
           <div class="row cursos">
             <div class="col-md-4 curso">
-            <a href="curso.php" class="btn btn-secondary btn-lg btn-block" >XXXXXXXXXXXXXXX</a>
+            <a href="curso.php" class="btn btn-secondary btn-lg btn-block" >curso 1</a>
             </div>
           </div>
     <!-- AQUI VAN LOS CURSOS -->
