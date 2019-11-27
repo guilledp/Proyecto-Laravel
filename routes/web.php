@@ -3,7 +3,7 @@
 Route::get('/cursos', 'CursoController@index');
 
 Route::get('/', function () {
-    return view('index');
+    return view('/auth/login');
 });
 
 Auth::routes();

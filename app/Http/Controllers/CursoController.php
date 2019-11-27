@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Curso;
 
 class CursoController extends Controller
 {
 
-  public function index()
+  /**
+   * Create a new controller instance.
+   *
+   * 
+   */
+
+  public function __construct()
   {
-    $cursos = Curso::all();
-    dd($cursos);
+      $this->middleware('auth');
   }
 
+  public function index()
+  {
+      return view('cursos');
+  }
 }

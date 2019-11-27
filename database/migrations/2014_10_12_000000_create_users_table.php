@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('empresa', 100);
             // Campos especificos
             $table->boolean('es_empresa')->default(false);
             $table->string('avatar',100)->nullable();

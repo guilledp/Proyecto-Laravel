@@ -11,6 +11,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+{{-- NOMBRE ++++++++++++++++++++++++++++++++++++++++++++ --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
@@ -24,12 +25,13 @@
                                 @enderror
                             </div>
                         </div>
-
+{{-- NOMBRE ++++++++++++++++++++++++++++++++++++++++++++ --}}
+{{-- APELLIDO ++++++++++++++++++++++++++++++++++++++++++++ --}}
                         <div class="form-group row">
-                            <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
 
                             <div class="col-md-6">
-                                <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" lastname="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+                                <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
 
                                 @error('lastname')
                                     <span class="invalid-feedback" role="alert">
@@ -38,7 +40,23 @@
                                 @enderror
                             </div>
                         </div>
+{{-- APELLIDO ++++++++++++++++++++++++++++++++++++++++++++ --}}
+{{-- EMPRESA +++++++++++++++++++++++++++++++++++++++++++++ --}}
+                        <div class="form-group row">
+                            <label for="empresa" class="col-md-4 col-form-label text-md-right">{{ __('Codigo Empresa') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="empresa" style="text-transform: uppercase;" type="text" class="form-control @error('empresa') is-invalid @enderror" name="empresa" value="{{ old('empresa') }}" required autocomplete="empresa" autofocus>
+
+                                @error('empresa')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+{{-- EMPRESA +++++++++++++++++++++++++++++++++++++++++++++ --}}
+{{-- EMAIL +++++++++++++++++++++++++++++++++++++++++++++++ --}}
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
@@ -52,7 +70,8 @@
                                 @enderror
                             </div>
                         </div>
-
+{{-- EMAIL ++++++++++++++++++++++++++++++++++++++++++++++++++ --}}
+{{-- PASSWORD +++++++++++++++++++++++++++++++++++++++++++++++ --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
@@ -66,7 +85,8 @@
                                 @enderror
                             </div>
                         </div>
-
+{{-- PASSWORD +++++++++++++++++++++++++++++++++++++++++++++++ --}}
+{{-- PASSWORD2 ++++++++++++++++++++++++++++++++++++++++++++++ --}}
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña') }}</label>
 
@@ -74,6 +94,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+{{-- PASSWORD2 ++++++++++++++++++++++++++++++++++++++++++++++ --}}
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
