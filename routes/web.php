@@ -1,11 +1,11 @@
 <?php
 
-Route::get('/cursos', 'CursoController@index');
-
-Route::get('/', function () {
-    return view('/auth/login');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+  return view('/auth/login');
+});
+
+Route::get('/cursos', 'HomeController@misCursos');
+
+Route::get('/miPerfil', 'HomeController@miPerfil');

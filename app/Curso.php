@@ -11,4 +11,6 @@ class Curso extends Model
     public $primaryKey ='id';
     public $timestamps = 'false';
 
+    protected $guarded = [];
+
 }
