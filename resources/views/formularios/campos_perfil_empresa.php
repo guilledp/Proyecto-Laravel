@@ -1,4 +1,4 @@
-<h2 class="display-5">Datos empresa</h2>
+<h4 class="display-5">Datos empresa</h4>
 
 <form action="profile.php" method="post">
 
@@ -10,7 +10,7 @@
     <input type="number" class="form-control" id="CUIT" placeholder="CUIT">
   </div>
 
-  <h2 class="display-5">Inicio de sesion</h2>
+  <h4 class="display-5">Inicio de sesion</h4>
 
   <div class="form-group">
     <input type="email" class="form-control" id="email" placeholder="email">

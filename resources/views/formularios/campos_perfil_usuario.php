@@ -1,4 +1,4 @@
-<h2 class="display-5">Datos personales</h2>
+<h4 class="display-5">Datos personales</h4>
 
 <form action="profile.php" method="post">
 
@@ -14,7 +14,7 @@
     <input type="text" class="form-control" id="company" placeholder="ID Empresa Ejemplo: AXQCFM">
   </div>
 
-  <h2 class="display-5">Inicio de sesion</h2>
+  <h4 class="display-5">Inicio de sesion</h4>
 
   <div class="form-group">
     <input type="email" class="form-control" id="email" placeholder="email">

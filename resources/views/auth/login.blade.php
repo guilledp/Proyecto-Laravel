@@ -11,12 +11,11 @@
             <div class="card">
 
                 <div class="card-body">
+
                     <form id="form-login" method="POST" action="{{ route('login') }}">
                         @csrf
 
-
-
-{{-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA --}}
+{{-- VALIDADO POR JS --}}
 
                           <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
@@ -32,18 +31,8 @@
                             </div>
                           </div>
 
-{{-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA --}}
-
-{{-- ESTO NO VA --}}
-
-{{-- ESTO NO VA --}}
-
-
-
-
-
-
-
+{{-- VALIDADO POR JS --}}
+{{-- VALIDADO POR JS --}}
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
@@ -59,6 +48,8 @@
                             </div>
                         </div>
 
+{{-- VALIDADO POR JS --}}
+
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -73,6 +64,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
+
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -82,6 +74,7 @@
                                         {{ __('Olvidate tu contraseña?') }}
                                     </a>
                                 @endif
+
                             </div>
                         </div>
                     </form>

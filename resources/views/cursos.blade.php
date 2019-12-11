@@ -38,12 +38,13 @@
     <!-- AQUI VAN LOS CURSOS -->
 
     <!-- BOTON AGREGAR CURSO -->
-    <?php
-    // if ($_SESSION['tipo'] == 'empresa') {
-    //   include('boton_curso_agregar.php');
-    // }
-    ?>
+    {{-- MOSTRAR SOLO SI ES EMPRESA --}}
+
+    <button class="btn-primary btn-circle btn-circle-xl m-1 boton-agregar">+</button>
+
+    {{-- MOSTRAR SOLO SI ES EMPRESA --}}
     <!-- BOTON AGREGAR CURSO -->
+
 
       <div class="vermas">
         <button type="button" class="btn btn-primary">ver todos los cursos</button>

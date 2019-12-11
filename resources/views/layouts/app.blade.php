@@ -61,9 +61,13 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                    {{-- BOTON PERFIL +++++++++++++++++++++++++++++++++++++++++ --}}
-                                    <a class="dropdown-item" href="/miPerfil">perfil</a>
-                                    {{-- BOTON PERFIL +++++++++++++++++++++++++++++++++++++++++ --}}
+                                  {{-- BOTON PERFCURSOS +++++++++++++++++++++++++++++++++++++++++ --}}
+                                  <a class="dropdown-item" href="/cursos">Mis cursos</a>
+                                  {{-- BOTON CURSOS +++++++++++++++++++++++++++++++++++++++++ --}}
+
+                                  {{-- BOTON PERFIL +++++++++++++++++++++++++++++++++++++++++ --}}
+                                  <a class="dropdown-item" href="/miPerfil">Mi perfil</a>
+                                  {{-- BOTON PERFIL +++++++++++++++++++++++++++++++++++++++++ --}}
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

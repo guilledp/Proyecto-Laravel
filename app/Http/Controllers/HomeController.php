@@ -27,4 +27,18 @@ class HomeController extends Controller
         return view('cursos');
     }
 
+    public function verCurso()
+    {
+        return view('curso');
+    }
+
+    public function hacerExamen()
+    {
+        return view('examen');
+    }
+
+    public function editarCurso()
+    {
+        return view('editar');
+    }
 }

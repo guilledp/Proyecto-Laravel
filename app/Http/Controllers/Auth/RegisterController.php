@@ -52,7 +52,7 @@ class RegisterController extends Controller
         'required' => 'Requerido',
         'string' => 'El campo debe ser un texto',
         'email' => 'El formato debe ser nombre@ejemplo.com',
-        'email.unique' => 'El email debe ser unico',
+        'email.unique' => 'Ya existe un usuario registrado con ese correo',
         'image' => 'Imagen requerida',
         'password.min' => 'La contraseña debe tener 8 caracteres.',
       ];
