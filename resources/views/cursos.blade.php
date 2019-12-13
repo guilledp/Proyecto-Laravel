@@ -30,21 +30,24 @@
     <main>
 
     <!-- AQUI VAN LOS CURSOS -->
-          <div class="row cursos">
+    <div class="row cursos">
+    @foreach($cursos as $curso)
+
             <div class="col-md-4 curso">
-            <a href="curso.php" class="btn btn-secondary btn-lg btn-block" >curso 1</a>
+            <a href="curso.php" class="btn btn-secondary btn-lg btn-block" >{{$curso->nombre}}</a>
             </div>
-          </div>
+
+    @endforeach
+  </div>
     <!-- AQUI VAN LOS CURSOS -->
 
     <!-- BOTON AGREGAR CURSO -->
     {{-- MOSTRAR SOLO SI ES EMPRESA --}}
 
-    <button class="btn-primary btn-circle btn-circle-xl m-1 boton-agregar">+</button>
+    <a href="{{url('crear')}}" class="btn-primary btn-circle btn-circle-xl m-1 boton-agregar">+</a>
 
     {{-- MOSTRAR SOLO SI ES EMPRESA --}}
     <!-- BOTON AGREGAR CURSO -->
-
 
       <div class="vermas">
         <button type="button" class="btn btn-primary">ver todos los cursos</button>

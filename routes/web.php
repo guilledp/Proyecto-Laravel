@@ -2,12 +2,14 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-  return view('/auth/login');
-});
+Route::get('/', 'Auth\LoginController@showLoginForm');
 
-Route::get('/cursos', 'HomeController@misCursos');
+Route::get('/cursos', 'cursoController@mostrarCursos');
 Route::get('/miPerfil', 'HomeController@miPerfil');
 Route::get('/curso', 'HomeController@verCurso');
+
 Route::get('/examen', 'HomeController@hacerExamen');
 Route::get('/editar', 'HomeController@editarCurso');
+
+Route::get('/crear', 'cursoController@crearCurso');
+Route::post('/crear', 'cursoController@guardarCurso');

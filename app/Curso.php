@@ -9,8 +9,7 @@ class Curso extends Model
 
     public $table = 'cursos';
     public $primaryKey ='id';
-    public $timestamps = 'false';
-
+    public $timestamps = 'true';
     protected $guarded = [];
 
 }

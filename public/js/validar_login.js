@@ -8,7 +8,7 @@ console.log(form);
 
   form.onsubmit = function (event){
 
-    event.preventDefault();
+
 
     for (element of form.elements) {
 
@@ -20,7 +20,8 @@ console.log(form);
             console.log('el email no es valido');
             element.classList.add('is-invalid');
             var divError = element.parentElement.querySelector('span.invalid-feedback');
-            divError.innerHTML = '<a> El formato es invalido </a>'
+            divError.innerHTML = '<a> El formato es invalido </a>';
+            event.preventDefault();
           }
         break;
         // email
@@ -30,7 +31,8 @@ console.log(form);
             console.log('el password esta vacio');
             element.classList.add('is-invalid');
             var divError = element.parentElement.querySelector('span.invalid-feedback');
-            divError.innerHTML = '<a> El campo esta vacio </a>'
+            divError.innerHTML = '<a> El campo esta vacio </a>';
+            event.preventDefault();
           }
         break;
         // pass
