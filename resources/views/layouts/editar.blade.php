@@ -2,11 +2,11 @@
 
 @section('content')
 
-  <div class="">
+<div class="">
 
-    <h4 class="display-5">Informacion del curso</h4>
+  <h4 class="display-5">Informacion del curso</h4>
 
-    <form action="" method="post">
+  <form action="" method="post">
 
     {{-- CAMPO LINK VIDEO --}}
     <div class="form-group row">

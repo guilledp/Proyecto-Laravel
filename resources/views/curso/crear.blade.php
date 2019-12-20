@@ -4,28 +4,28 @@
 
 <div class="col-md-11">
 
-    <h4 class="display-5">Crear un nuevo curso</h4>
-    <p></p>
+  <h4 class="display-5">Crear un nuevo curso</h4>
+  <p></p>
 
-    <form action="{{ route('curso.store')}}" method="POST">
-      @method('POST')
-      @csrf
+  <form action="{{ route('curso.store')}}" method="POST">
+    @method('POST')
+    @csrf
 
-      {{-- CAMPO NOMBRE --}}
-      <div class="form-group row">
-        <label for="nombre" class="col-md-3 col-form-label text-md-right">{{ __('Nombre del curso') }}</label>
+    {{-- CAMPO NOMBRE --}}
+    <div class="form-group row">
+      <label for="nombre" class="col-md-3 col-form-label text-md-right">{{ __('Nombre del curso') }}</label>
 
-        <div class="col-md-9">
-          <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" autofocus required="">
+      <div class="col-md-9">
+        <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" autofocus required="">
 
-          <span class="invalid-feedback" role="alert">
-            @error('nombre')
-            <strong>{{ $message }}</strong>
-            @enderror
-          </span>
-        </div>
+        <span class="invalid-feedback" role="alert">
+          @error('nombre')
+          <strong>{{ $message }}</strong>
+          @enderror
+        </span>
       </div>
-      {{-- CAMPO NOMBRE --}}
+    </div>
+    {{-- CAMPO NOMBRE --}}
 
     {{-- CAMPO LINK VIDEO --}}
     <div class="form-group row">
