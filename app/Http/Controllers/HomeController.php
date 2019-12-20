@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -18,8 +19,12 @@ class HomeController extends Controller
     }
 
     public function miPerfil() {
+        if(Auth::user()->es_empresa) {
+            return view('perfil.empresa', ['user' => Auth::user()]);
+        } else {
+            return view('perfil.empleado', ['user' => Auth::user()]);
 
-        return view('perfil');
+        }
     }
 
     public function misCursos()
@@ -29,16 +34,18 @@ class HomeController extends Controller
 
     public function verCurso()
     {
-        return view('curso');
+        return view('curso.ver');
     }
 
     public function hacerExamen()
     {
-        return view('examen');
+        return view('curso.examen');
     }
 
     public function editarCurso()
     {
-        return view('editar');
+        return view('curso.editar');
     }
+
+    
 }

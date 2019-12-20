@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Arsem - Capacitación'),
+    'pagination_limit' => env('PAGINATION_LIMIT', 10),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------

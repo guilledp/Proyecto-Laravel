@@ -1,138 +1,170 @@
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	border: none;
-	outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
-.navbar-brand{
+#avatarimagen{
+margin-left: 1rem;
+
+}
+
+#menu{
+  align-items: center;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.navbar img{
+  height: 5rem;
+}
+
+#buscar-cursos{
+  margin-bottom: 20px;
+}
+
+#row-cursos{
+  text-align: center;
+  margin-top: 25px;
+}
+
+#row-curso{
+  text-align: initial;
+}
+
+.navbar-brand {
   width: 50%;
 }
 
-.curso{
-	margin-bottom: 20px;
-	display: flex;
+.curso {
+  margin-bottom: 20px;
+  display: flex;
 }
 
-.cursos{
-	margin-top:20px;
-	justify-content: space-evenly;
-	padding-left: 25px;
-	padding-right: 25px;
-	justify-content: flex-end;
+.cursos {
+  display: contents;
+  margin-top: 25px;
+  justify-content: space-evenly;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: flex-end;
 }
 
-.search{
-	justify-content: center;
-	margin-top: 20px;
+.search {
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.vermas{
-	text-align: center;
-	margin-top: 20px;
+.vermas {
+  text-align: center;
+  margin-top: 20px;
 }
-#NavBar{
-	justify-content: flex-end;
+
+#NavBar {
+  justify-content: flex-end;
 }
 
 footer {
-	margin-top: 30px;
+  margin-top: 30px;
   text-align: center;
-	color:lightgrey;
+  color: lightgrey;
 }
 
-.login{
-	min-block-size: -webkit-fill-available;
-	align-items: center;
-	justify-content: center;
-	margin: 0px;
+.login {
+  min-block-size: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
 }
 
-.logo img{
-	width: 150px;
+.logo img {
+  width: 150px;
 }
 
-.botones{
-text-align: right;
+.botones {
+  text-align: right;
 }
 
-.perfil{
-	margin-top: 25px;
-	justify-content:space-around;
-	padding: 25px;
-
+.perfil {
+  margin-top: 25px;
+  justify-content: space-around;
+  padding: 25px;
 }
 
-#imagen_perfil{
-max-width: 90px;
+#imagen_perfil {
+  max-width: 90px;
 }
 
-.terminos{
-	margin-top: 5px;
+.terminos {
+  margin-top: 5px;
 }
 
-.terminos label{
-	font-size: small;
+.terminos label {
+  font-size: small;
 }
 
-.terminos input{
-	vertical-align: middle;
+.terminos input {
+  vertical-align: middle;
 }
 
-.invalid-feedback{
-display: inline-block;
-width: 100%;
-margin-top: 0;
-font-size: 80%;
-color: #dc3545;
-margin-bottom: .25rem;
+.invalid-feedback {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  font-size: 80%;
+  color: #dc3545;
+  margin-bottom: .25rem;
 }
 
 .loginform {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }
 
-.display-1{
-	font-size: 2.5rem;
-}
-.display-2{
-	font-size: 2rem;
+.display-1 {
+  font-size: 2.5rem;
 }
 
+.display-2 {
+  font-size: 2rem;
+}
 
 div.curso-video {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .curso-video {
-	position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
 
 .curso-video iframe, .curso-video object, .curso-video embed {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#right{
-	text-align: right;
+#right {
+  text-align: right;
 }
 
-#red::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+#red::placeholder {
+ /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: red;
 }
 
-.alert{
-	width: 100%;
-	position: fixed;
+.alert {
+  width: 100%;
+  position: fixed;
 }
 
 .image-upload>input {
@@ -143,8 +175,8 @@ div.curso-video {
   position: relative;
   width: 50%;
   max-width: 300px;
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .image {
@@ -155,35 +187,34 @@ div.curso-video {
 
 /* Top right text */
 .bottom-right {
-
-	line-height: 0;
-	font-size: x-large;
-	position: absolute;
+  line-height: 0;
+  font-size: x-large;
+  position: absolute;
   bottom: 0px;
   right: 0px;
 }
 
-.image-upload img{
-width: 120px;
-height: 120px;
-object-fit: cover;
-border-radius: 50%;
+.image-upload img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.image-upload .container{
-width: 100%;
+.image-upload .container {
+  width: 100%;
 }
 
-.boton-subir-avatar .btn{
-	width: 130px;
+.boton-subir-avatar .btn {
+  width: 130px;
 }
 
-#grupo-avatar{
-	margin: 0px !important;
+#grupo-avatar {
+  margin: 0px !important;
 }
 
-.form-perfil{
-margin-bottom: 50px;
+.form-perfil {
+  margin-bottom: 50px;
 }
 
 .btn-circle {
@@ -207,54 +238,54 @@ margin-bottom: 50px;
   font-size: 1.3rem;
 }
 
-.boton-agregar{
-	position: fixed;
-	bottom: 7.5;
-	right: 15;
-	z-index: 9999;
+.boton-agregar {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+  z-index: 9999;
 }
 
-.curso-examen{
-	text-align: center;
-	margin-top: 30px;
+.curso-examen {
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* IFRAME EXAMEN */
 
 #Iframe-Liason-Sheet {
-	 max-width: 760px;
-	 max-height: 1200px;
-	 overflow: hidden;
-	 }
+  max-width: 760px;
+  max-height: 1200px;
+  overflow: hidden;
+}
 	 /* inner wrapper: make responsive */
-	 .responsive-wrapper {
-	 position: relative;
-	 height: 0; /* gets height from padding-bottom setting */
-	 -webkit-overflow-scrolling: touch;
-	 overflow: auto;
-	 }
-	 .responsive-wrapper iframe {
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-	 margin: 0;
-	 padding: 0;
-	 border: none;
-	 }
+.responsive-wrapper {
+  position: relative;
+  height: 0;
+ /* gets height from padding-bottom setting */
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+.responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 	 /* padding-bottom = h/w as a % */
-	 .responsive-wrapper-wxh-760x1200 {
-	 padding-bottom: 363.6364%;
-	 }
-	 .center-block-horiz {
-	 margin-left: auto !important;
-	 margin-right: auto !important;
-	 }
+.responsive-wrapper-wxh-760x1200 {
+  padding-bottom: 363.6364%;
+}
 
-	#navbarSupportedContent{
-		text-align: right;
-	}
+.center-block-horiz {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
-
-	 /* IFRAME EXAMEN */
+#navbarSupportedContent {
+  text-align: right;
+}

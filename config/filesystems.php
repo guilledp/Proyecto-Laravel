@@ -63,6 +63,18 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
+        'avatars' => [
+           'driver' => 'local',
+           'root'   => public_path() . '/img/useravatar',
+           'url' => env('APP_URL').'/img/useravatar',
+           'visibility' => 'public',
+        ],
+        'logos' => [
+           'driver' => 'local',
+           'root'   => public_path() . '/img/userlogo',
+           'url' => env('APP_URL').'/img/userlogo',
+           'visibility' => 'public',
+        ]
 
     ],
 

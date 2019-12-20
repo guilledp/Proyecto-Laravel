@@ -2,14 +2,30 @@
 
 Auth::routes();
 
-Route::get('/', 'Auth\LoginController@showLoginForm');
+// Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::post('/', 'Auth\LoginController@showLoginForm')->name('login');
 
-Route::get('/cursos', 'cursoController@mostrarCursos');
-Route::get('/miPerfil', 'HomeController@miPerfil');
-Route::get('/curso', 'HomeController@verCurso');
 
-Route::get('/examen', 'HomeController@hacerExamen');
-Route::get('/editar', 'HomeController@editarCurso');
+Route::group(['middleware' => 'auth'], function () {
+	
+	Route::get('/', 'CursoController@index')->name('home');
+	Route::post('/user/update-avatar', 'UserController@updateAvatar')->name('update-avatar');
+	Route::post('/user/update-logo', 'UserController@updateLogo')->name('update-logo');
+	Route::post('/user/update', 'UserController@update')->name('user-update');
+	//Route::get('/home', 'CursoController@index')->name('home');
 
-Route::get('/crear', 'cursoController@crearCurso');
-Route::post('/crear', 'cursoController@guardarCurso');
+	Route::get('/miPerfil', 'HomeController@miPerfil')->name('miPerfil');
+	Route::get('/curso/{uuid}/examen', 'CursoController@examen')->name('curso.examen');
+	
+	Route::resource('/cursos', 'CursoController')
+		->names([
+			'index' => 'cursos.index',
+			'create' => 'curso.create',
+			'update' => 'curso.update',
+			'store' => 'curso.store',
+			'show' => 'curso.show',
+			'edit' => 'curso.edit'
+		]);
+
+});
+

@@ -16,14 +16,16 @@ class AgregarTablaCursos extends Migration
       Schema::create('cursos', function (Blueprint $table) {
       // Campos especificos
         $table->bigIncrements('id');
-        $table->string('nombre',200)->nullable();
-        $table->text('linkVideo')->nullable();
-        $table->text('linkPDF')->nullable();
-        $table->text('linkPPT')->nullable();
-        $table->text('linkExamen')->nullable();
-        $table->integer('empresa_ID');
+        $table->integer('empresa_id')->unsigned();
+        $table->uuid('uuid')->unique();
+        $table->string('nombre',200)->nullable()->default(null);
+        $table->text('linkVideo')->nullable()->default(null);
+        $table->text('linkPDF')->nullable()->default(null);
+        $table->text('linkPPT')->nullable()->default(null);
+        $table->text('linkExamen')->nullable()->default(null);
+        $table->boolean('activo')->default(true);
+
         $table->timestamps();
-      // Campos especificos
     });
     }
 

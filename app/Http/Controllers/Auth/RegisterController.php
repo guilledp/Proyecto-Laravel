@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+// para el uuid
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+
 class RegisterController extends Controller
 {
     /*
@@ -48,22 +52,47 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
+        //dd($data);
       $mensajes = [
         'required' => 'Requerido',
         'string' => 'El campo debe ser un texto',
         'email' => 'El formato debe ser nombre@ejemplo.com',
         'email.unique' => 'Ya existe un usuario registrado con ese correo',
-        'image' => 'Imagen requerida',
+        //'image' => 'Imagen requerida',
         'password.min' => 'La contraseña debe tener 8 caracteres.',
+        'codigo_empresa.string' => 'Debe indicarse un código de empresa válido',
+        'codigo_empresa.exists' => 'Debe indicarse un código de empresa válido',
+        'codigo_empresa.max' => 'Debe indicarse un código de empresa válido',
       ];
 
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+        if(!$data['es_empresa']) { // usuario
+            $ce = $data['codigo_empresa'];
+            return Validator::make($data, 
+                [
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:4', 'confirmed'],
+                'lastname'=> ['required', 'string', 'max:255'],
+                'codigo_empresa'=> [
+                    'required',
+                    Rule::exists('users', 'codigo_empresa')                     
+                        ->where(function ($query) use ($ce) {                      
+                        $query->whereCodigoEmpresa($ce)->where('es_empresa',1);                  
+                        })]
+                    ]
+                    ,$mensajes);
+        } else { // empresa
+            return Validator::make($data, [
+            // 'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:4', 'confirmed'],
-            'lastname'=> ['required', 'string', 'max:255'],
+            // 'lastname'=> ['required', 'string', 'max:255'],
             'empresa'=> ['required', 'string', 'max:255'],
+            'cuit'=> ['required', 'integer'],
         ], $mensajes);
+        }
+        
     }
 
     /**
@@ -74,11 +103,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        // si es empresa
+        if($data['es_empresa']) {
+            $data['codigo_empresa'] = strtoupper(substr(preg_replace("/[0-9]/", "", md5(microtime())), 0,4)); 
+            $data['name'] = $data['empresa'];
+            $data['lastname'] = $data['cuit'];
+
+        }
+
         return User::create([
             'name' => $data['name'],
+            'uuid' => Str::uuid(),
             'email' => $data['email'],
             'lastname' => $data['lastname'],
+            'codigo_empresa' => $data['codigo_empresa'],
+            'es_empresa' => $data['es_empresa'],
             'empresa' => $data['empresa'],
+            'cuit' => $data['cuit'],
             'password' => Hash::make($data['password']),
         ]);
     }
